@@ -1,0 +1,8 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+GET     /                  controllers.HomeController.blockingDefaultThreadPoolNoLogging
+GET     /default           controllers.HomeController.blockingDefaultThreadPool
+GET     /wrapped           controllers.HomeController.blockingWrappedDefaultThreadPool
+GET     /blocking-pool     controllers.HomeController.blockingWithBlockingThreadPool
