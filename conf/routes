@@ -6,3 +6,4 @@ GET     /                  controllers.HomeController.blockingDefaultThreadPoolN
 GET     /default           controllers.HomeController.blockingDefaultThreadPool
 GET     /wrapped           controllers.HomeController.blockingWrappedDefaultThreadPool
 GET     /blocking-pool     controllers.HomeController.blockingWithBlockingThreadPool
+GET     /mixed             controllers.HomeController.blockingMixedPools

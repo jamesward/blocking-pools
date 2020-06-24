@@ -67,6 +67,12 @@ class HomeController extends InjectedController {
     }
   }
 
+  def blockingMixedPools = Action.async {
+    doBlockingAsync()(blockingExecutionContext).map { result =>
+      Ok(result)
+    }(loggedDefaultExecutionContext)
+  }
+
   private def BlockingAction(executionContext: ExecutionContext)(block: => Result): Action[AnyContent] = {
     Action.async {
       Future(block)(executionContext)
